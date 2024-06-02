@@ -17,7 +17,7 @@ void setup() {
   //radio.enableAckPayload();   // разрешить отсылку данных в ответ на входящий сигнал
   //radio.enableDynamicAck();                                  // Разрешаем выборочно отключать запросы подтверждения приема данных.
   radio.setPayloadSize(32);   // размер пакета, в байтах
-  radio.openWritingPipe(0x7878787878LL);  // мы - труба 0, открываем канал для передачи данных
+  radio.openWritingPipe(0xAABBCCDD22LL);  // мы - труба 0, открываем канал для передачи данных
   radio.openReadingPipe (0, 0x7878787878LL); // Открываем 0 трубу с адресом 2 передатчика 0xAABBCCDD22, для приема данных.
   radio.openReadingPipe (1, 0xAABBCCDD11LL); // Открываем 1 трубу с адресом 2 передатчика 0xAABBCCDD22, для приема данных.
   radio.openReadingPipe (2, 0xAABBCCDD22LL); // Открываем 2 трубу с адресом 2 передатчика 0xAABBCCDD22, для приема данных.
